@@ -66,12 +66,12 @@ Error message:
 Push rejected due to non-fast-forward
 
 
-##Final Resolution
+## Final Resolution
 
 The issue was resolved by pulling the remote changes again using a merge
 strategy and then pushing the updated history.
 
-##Commands used:
+## Commands used:
 ```bash
 git pull --no-rebase origin main
 git push origin main
@@ -85,15 +85,15 @@ A merge commit combining both histories
 
 Conflict resolution preserved in history
 
-##Command used:
+## Command used:
 ```bash
 git log --oneline --graph --all
 ```
 
-Screenshot:
-![graph](images/graph.png)
+## Screenshot:
+![graph](images/Graph.png)
 
-Conclusion
+## Conclusion
 
 This exercise demonstrated real-world Git conflict handling using a
 merge-based workflow. The conflict was resolved manually while preserving
