@@ -42,8 +42,6 @@ git stash apply
 Result:
 The previously stashed changes were restored on top of the updated codebase without any conflicts.
 
-![stash](images/stash-session.png)
-
 ---
 
 Final Outcome:
