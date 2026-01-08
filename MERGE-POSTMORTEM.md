@@ -33,26 +33,22 @@ Conflict Details
 Git marked the conflicting section in the file using conflict markers,
 indicating that it could not automatically decide which change to keep.
 
-Example of conflict markers:
-
-Resolution Strategy
-
 As required by the task, both changes were preserved.
 
 The conflict was resolved manually by removing the conflict markers and
 keeping both versions in the file:
 
-// version 1.1
+// version 1.2
 // version 2.0
 
 Completing the Merge
 
 After resolving the conflict, the merge was completed using:
 
-git add app.js
+```bash
+git add commit.txt
 git commit -m "Merge conflict resolved: kept both changes"
-
-Screenshot
+```
 
 Resolved file staged and committed:
 
@@ -67,27 +63,19 @@ Error message:
 
 ! [rejected] main -> main (non-fast-forward)
 
-Screenshot
-
-Push rejected due to non-fast-forward:
+Push rejected due to non-fast-forward
 
 
-Final Resolution
+##Final Resolution
 
 The issue was resolved by pulling the remote changes again using a merge
 strategy and then pushing the updated history.
 
-Commands used:
-
+##Commands used:
+```bash
 git pull --no-rebase origin main
 git push origin main
-
-Screenshot
-
-Successful push after resolving divergence:
-
-
-Commit Graph Verification
+```
 
 The final commit graph confirms:
 
@@ -97,14 +85,13 @@ A merge commit combining both histories
 
 Conflict resolution preserved in history
 
-Command used:
-
+##Command used:
+```bash
 git log --oneline --graph --all
+```
 
-Screenshot
-
-Final commit graph with merge history:
-
+Screenshot:
+![graph](images/graph.png)
 
 Conclusion
 
